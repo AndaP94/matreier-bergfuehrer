@@ -40,3 +40,5 @@ import {NgxGalleryModule} from '@kolkov/ngx-gallery';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
