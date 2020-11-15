@@ -25,19 +25,25 @@ export class MainInfoComponent implements OnInit {
       name: 'Lukas Pichler',
       email: 'lukas.pichler82@gmx.at',
       website: 'https://alpin-pichler.at',
-      picLink: '../assets/img/team/luki.JPG'
+      picLink: '../assets/img/img-edit/Bergführer Matrei-2.jpg'
     },
       {
-      name: 'Isidor',
-      email: this.exampleEmail,
-      website: 'https://alpin-pichler.at',
-      picLink: '../assets/img/team/isidor.JPG'
+      name: 'Isidor Poppeller',
+      email: 'info@bergfuehrer-isidor.at',
+      website: 'https://www.bergfuehrer-isidor.at/de/',
+      picLink: '../assets/img/img-edit/Bergführer Matreiisidor-3.jpg'
     },
       {
         name: 'Alban Resinger',
         email: 'resy@gmx.net',
-        website: 'https://alpin-pichler.at',
-        picLink: '../assets/img/team/alban.jpg'
+        website: 'https://bergfuehrer-matrei.at',
+        picLink: '../assets/img/img-edit/Bergführer Matrei-Alban.jpg'
+      },
+      {
+        name: 'Emanuel Egger',
+        email: 'e.egger@hohetauern.at',
+        website: 'https://bergfuehrer-matrei.at',
+        picLink: '../assets/img/img-edit/Bergführer Matrei-Alban.jpg'
       }
     ];
   }
