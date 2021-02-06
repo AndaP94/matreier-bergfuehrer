@@ -1,60 +1,81 @@
 <div class="container tariffs-container">
-  <h2 class="tariffs-title"><i class="fas fa-info-circle"></i> Tarife</h2>
-  <div class="row">
+  <h1 class="tariffs-title">Unsere Tarife <i style="margin-left: 1rem" class="fas fa-info"></i></h1>
+  <div class="row tariffs">
     <div class="col-md-6">
-      <div class="card">
-
-        <!-- Card image -->
-        <div class="view overlay">
-          <img class="card-img-top" [src]="imgSrcSummer"
-               alt="Card image cap">
-          <a href="#!">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+      <div class="tariffs-icon-container">
+        <div class="hover-div" (click)="basicModal.show()" data-toggle="modal">
+          <span class="tariffs-icon-summer"><i class="fas fa-sun"></i></span>
+          <h3 class="tariffs-label"><b>Sommer Tarife</b></h3>
         </div>
-
-        <!-- Card content -->
-        <div class="card-body">
-
-          <!-- Title -->
-          <h4 class="card-title">Tarife für den Sommer</h4>
-          <!-- Text -->
-          <p class="card-text">Holen Sie sich jetzt alle Informationen für unsere Sommer Touren</p>
-          <!-- Button -->
-          <button type="button" class="btn btn btn-warning btn-rounded">{{buttonTextSummer}}<i class="fas fa-sun pl-1"></i></button>
-        </div>
-
+        <p class="tariffs-text">
+          Holen Sie sich jetzt alle Informationen für unsere Sommer Touren!
+        </p>
       </div>
-      <!-- Card -->
-
+      <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog"
+           aria-labelledby="myBasicModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fluid" style="max-width: 80%" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="heading lead" style="display: contents; color: white">Sommer Tarife Blatt</p>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                <span aria-hidden="true" style="color: white">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <div style="position: relative" *ngIf="basicModal.isShown">
+                  <simple-pdf-viewer [src]="summerPdf">
+                  </simple-pdf-viewer>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                      (click)="basicModal.hide()" mdbWavesEffect>Close
+              </button>
+              <button  type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect (click)="downloadPDF(tariffsType.summer)">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-md-6">
-      <div class="card">
-
-        <!-- Card image -->
-        <div class="view overlay">
-          <img class="card-img-top" [src]="imgSrcWinter"
-               alt="Winter IMG">
-          <a href="#!">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+      <div class="tariffs-icon-container">
+        <div class="hover-div" (click)="basicModal2.show()">
+          <span class="tariffs-icon-winter"><i class="fas fa-skiing-nordic"></i></span>
+          <h3 class="tariffs-label"><b>Winter Tarife</b></h3>
         </div>
-
-        <!-- Card content -->
-        <div class="card-body">
-
-          <!-- Title -->
-          <h4 class="card-title">Tarife für den Winter</h4>
-          <!-- Text -->
-          <p class="card-text">Holen Sie sich jetzt alle Informationen für unsere Sommer Touren</p>
-          <!-- Button -->
-          <button type="button" class="btn btn-info btn-rounded">{{buttonTextWinter}}<i class="fas fa-snowboarding pl-1"></i></button>
-
-        </div>
-
+        <p class="tariffs-text">
+          Holen Sie sich jetzt alle Informationen für unsere Winter Touren!
+        </p>
       </div>
-      <!-- Card -->
-
+      <div mdbModal #basicModal2="mdbModal" class="modal fade" tabindex="-1" role="dialog"
+           aria-labelledby="myBasicModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-fluid" style="max-width: 80%" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="heading lead" style="display: contents; color: white">Winter Tarife Blatt</p>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal2.hide()">
+                <span aria-hidden="true" style="color: white">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <div style="position: relative" *ngIf="basicModal2.isShown">
+                  <simple-pdf-viewer [src]="winterPdf">
+                  </simple-pdf-viewer>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                      (click)="basicModal2.hide()" mdbWavesEffect>Close
+              </button>
+              <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect (click)="downloadPDF(tariffsType.winter)">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

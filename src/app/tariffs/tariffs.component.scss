@@ -1,6 +1,6 @@
 .tariffs-title{
   text-align: center;
-  margin-top: 20px;
+  margin-top: 6rem;
   border-bottom: 3px solid rgba(74,107,179,0.9);
 }
 .tariffs-container{
@@ -9,7 +9,7 @@
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
-  margin-bottom: 20px;
+  margin-bottom: 6rem;
 }
 
 @keyframes fadein {
@@ -56,3 +56,48 @@
   text-align: center;
   margin: auto;
 }
+.tariffs-icon-summer{
+  margin: auto;
+  font-size: 6rem;
+  display: table;
+  color: #eee51b;
+  cursor: pointer;
+}
+.tariffs-icon-winter{
+  margin: auto;
+  font-size: 6rem;
+  display: table;
+  color: rgba(74,107,179,0.9);
+  cursor: pointer;
+}
+.tariffs-label{
+  text-align: center;
+  cursor: pointer;
+}
+.tariffs-text {
+  text-align: center;
+  margin-top: 2rem;
+}
+.tariffs{
+  margin-top: 2rem;
+}
+.hover-div:hover{
+  transform: scale(1.05);
+}
+.hover-div{
+  transition: 0.5s;
+}
+.animate-icon{
+  animation: rotating 4s linear infinite;
+}
+@keyframes rotating {
+  0%  { transform: rotate(0);}
+  100%{ transform: rotate(1turn);}
+}
+::ng-deep.modal-header{
+  background: #6baccf;
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+

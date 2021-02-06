@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,7 +14,8 @@ import { MemberComponent } from './member/member.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HttpClientModule} from '@angular/common/http';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
-
+import {ButtonsModule, CardsModule, CarouselModule, IconsModule, ModalModule, WavesModule} from 'angular-bootstrap-md';
+import {SimplePdfViewerModule} from 'simple-pdf-viewer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +30,20 @@ import {NgxGalleryModule} from '@kolkov/ngx-gallery';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot(),
     FormsModule,
     NgxGalleryModule,
-    HttpClientModule
+    HttpClientModule,
+    IconsModule,
+    CarouselModule,
+    CardsModule,
+    ModalModule.forRoot(),
+    ButtonsModule,
+    WavesModule,
+    BrowserModule,
+    SimplePdfViewerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
 
