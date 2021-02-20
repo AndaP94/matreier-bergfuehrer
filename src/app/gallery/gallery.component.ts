@@ -1,5 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from '@kolkov/ngx-gallery';
+import {Component, Input, OnInit} from '@angular/core';
+
+export interface Image{
+  galleryImages: string;
+  thumbnailImageSrc: string;
+  alt: string;
+  title: string;
+}
+export interface ResponsiveOption{
+  breakpoint: string;
+  numVisible: number;
+}
 
 @Component({
   selector: 'app-gallery',
@@ -7,64 +17,72 @@ import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from '@kolkov/n
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[];
 
   constructor() { }
+  responsiveOptions: any[];
+  public images: any[];
+
+  public static getTile(title: string): string{
+    let tl: string;
+    if (title.includes('.jpg')){
+      tl = title.replace('.jpg', '').replace('../assets/img-gallery/', '');
+    }else if (title.includes('.jpeg')){
+      tl = title.replace('jpeg', '').replace('../assets/img-gallery/', '');
+    }else if (title.includes('.JPG')){
+      tl = title.replace('.JPG', '').replace('../assets/img-gallery/', '');
+    }else {
+      tl = title;
+    }
+    return tl;
+  }
 
   ngOnInit(): void {
-    this.galleryOptions = [
+    this.responsiveOptions = [
       {
-        width: '800px',
-        height: '800px',
-        thumbnailsColumns: 4,
-        arrowPrevIcon: 'fa fa-chevron-left',
-        arrowNextIcon: 'fa fa-chevron-right',
-        imageAnimation: NgxGalleryAnimation.Slide
+        breakpoint: '1024px',
+        numVisible: 5
       },
-      // max-width 800
       {
-        breakpoint: 800,
-        width: '100%',
-        height: '600px',
-        imagePercent: 100,
-        thumbnailsPercent: 20,
-        thumbnailsMargin: 20,
-        thumbnailMargin: 20
+        breakpoint: '768px',
+        numVisible: 3
       },
-      // max-width 400
       {
-        breakpoint: 400,
-        preview: false
+        breakpoint: '560px',
+        numVisible: 1
       }
-    ];
+      ];
 
-    this.galleryImages = [
+    this.images = [
       {
-        small: '../assets/img-gallery/Großvenediger1.jpg',
-        medium: '../assets/img-gallery/Großvenediger1.jpg',
-        big: '../assets/-gallery/Großvenediger1.jpg'
+        galleryImages: '../assets/img-gallery/Großvenediger1.jpg',
+        thumbnailImageSrc: '../assets/img-gallery/Großvenediger1.jpg',
+        alt: GalleryComponent.getTile('../assets/-gallery/Großvenediger1.jpg'),
+        title: GalleryComponent.getTile('../assets/-gallery/Großvenediger1.jpg')
       },
       {
-        small: '../assets/img-gallery/IMG_1734.jpg',
-        medium: '../assets/img-gallery/IMG_1734.jpg',
-        big: '../assets/img-gallery/IMG_1734.jpg'
+        galleryImages: '../assets/img-gallery/IMG_1734.jpg',
+        thumbnailImageSrc: '../assets/img-gallery/IMG_1734.jpg',
+        alt: GalleryComponent.getTile('../assets/img-gallery/IMG_1734.jpg'),
+        title: GalleryComponent.getTile('../assets/img-gallery/IMG_1734.jpg')
       },
       {
-        small: '../assets/img-gallery/IMG_1735.jpg',
-        medium: '../assets/img-gallery/IMG_1735.jpg',
-        big: '../assets/img-gallery/IMG_1735.jpg'
-      },{
-        small: '../assets/img-gallery/IMG_1807.jpg',
-        medium: '../assets/img-gallery/IMG_1807.jpg',
-        big: '../assets/img-gallery/IMG_1807.jpg'
+        galleryImages: '../assets/img-gallery/IMG_1735.jpg',
+        thumbnailImageSrc: '../assets/img-gallery/IMG_1735.jpg',
+        alt: GalleryComponent.getTile('../assets/img-gallery/IMG_1735.jpg'),
+        title: GalleryComponent.getTile('../assets/img-gallery/IMG_1735.jpg')
       },
       {
-        small: '../assets/img-gallery/5-small.jpeg',
-        medium: '../assets/img-gallery/5-medium.jpeg',
-        big: '../assets/img-gallery/5-big.jpeg'
+        galleryImages: '../assets/img-gallery/IMG_1807.jpg',
+        thumbnailImageSrc: '../assets/img-gallery/IMG_1807.jpg',
+        alt: GalleryComponent.getTile('../assets/img-gallery/IMG_1807.jpg'),
+        title: GalleryComponent.getTile('../assets/img-gallery/IMG_1807.jpg')
+      },
+      {
+        galleryImages: '../assets/img-gallery/5-small.jpeg',
+        thumbnailImageSrc: '../assets/img-gallery/5-medium.jpeg',
+        alt: GalleryComponent.getTile('../assets/img-gallery/5-big.jpeg'),
+        title: GalleryComponent.getTile('../assets/img-gallery/5-big.jpeg')
       }
     ];
   }
-
 }

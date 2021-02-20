@@ -16,6 +16,7 @@ import { HttpClientModule} from '@angular/common/http';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import {ButtonsModule, CardsModule, CarouselModule, IconsModule, ModalModule, WavesModule} from 'angular-bootstrap-md';
 import {SimplePdfViewerModule} from 'simple-pdf-viewer';
+import {GalleriaModule} from 'primeng/galleria';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import {SimplePdfViewerModule} from 'simple-pdf-viewer';
     ButtonsModule,
     WavesModule,
     BrowserModule,
-    SimplePdfViewerModule
+    SimplePdfViewerModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent],
