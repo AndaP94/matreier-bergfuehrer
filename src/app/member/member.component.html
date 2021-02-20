@@ -17,10 +17,10 @@
     <!--Text-->
     <mdb-card-text>
       <p>
-        <mdb-icon fas icon="envelope" class="mr-3"></mdb-icon> {{member.email}}
+        <mdb-icon fas icon="envelope" style="margin-right: .1rem !important;"></mdb-icon> <a href="mailto:{{member.email}}">{{member.email}}</a>
       </p>
       <p>
-        <mdb-icon fas icon="home" class="mr-3"></mdb-icon> {{member.website}}
+        <mdb-icon fas icon="home" style="margin-right: .1rem !important;"></mdb-icon> <a href="{{member.website}}">{{member.shortWebUri}}</a>
       </p>
     </mdb-card-text>
   </mdb-card-body>

@@ -1,3 +1,10 @@
 ::ng-deep.img-fluid{
   height: auto;
 }
+::ng-deep.card:hover{
+  transform: scale(1.2);
+  transition: 1.5s;
+}
+::ng-deep.card{
+  margin-bottom: 1rem;
+}

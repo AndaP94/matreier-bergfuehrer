@@ -13,6 +13,7 @@ export class MemberComponent implements OnInit {
   memberEmail = '';
   memberWebsiteLink = '';
   picUrl = '';
+  shortWebUri = '';
   @Input() member: Member;
   @Input() public name(name: string){
     this.memberName = name;
@@ -25,6 +26,9 @@ export class MemberComponent implements OnInit {
   }
   @Input() public url(url: string){
     this.picUrl = url;
+  }
+  @Input() public shortUri(uri: string){
+    this.shortWebUri = uri;
   }
 
   ngOnInit(): void {
