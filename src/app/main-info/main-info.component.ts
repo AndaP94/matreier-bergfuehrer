@@ -52,14 +52,14 @@ export class MainInfoComponent implements OnInit {
       },
       {
         name: 'Rebekka Egger',
-        email: 'info@bergfuehrer-isidor.at',
+        email: 'info@bergführer-matrei.at',
         website: 'https://bergfuehrer-matrei.at',
         picLink: '../assets/img/team/RebekkaEgger.jpg',
         shortWebUri: 'bergfuehrer-matrei.at'
       },
       {
         name: 'Maria Mattersberger',
-        email: 'info@bergfuehrer-isidor.at',
+        email: 'info@bergführer-matrei.at',
         website: 'https://bergfuehrer-matrei.at',
         picLink: '../assets/img/team/MariaMattersberger.jpg',
         shortWebUri: 'bergfuehrer-matrei.at'

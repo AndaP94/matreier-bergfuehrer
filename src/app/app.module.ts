@@ -17,6 +17,7 @@ import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import {ButtonsModule, CardsModule, CarouselModule, IconsModule, ModalModule, WavesModule} from 'angular-bootstrap-md';
 import {SimplePdfViewerModule} from 'simple-pdf-viewer';
 import {GalleriaModule} from 'primeng/galleria';
+import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import {GalleriaModule} from 'primeng/galleria';
     WavesModule,
     BrowserModule,
     SimplePdfViewerModule,
-    GalleriaModule
+    GalleriaModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

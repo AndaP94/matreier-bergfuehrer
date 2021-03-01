@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Galleria} from 'primeng/galleria';
 
 export interface Image{
   galleryImages: string;
@@ -16,11 +17,15 @@ export interface ResponsiveOption{
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit {
-
+export class GalleryComponent implements OnInit, OnDestroy {
+  @ViewChild('galleria') galleria: Galleria;
+  showThumbnails: boolean;
+  fullscreen = false;
+  activeIndex = 0;
+  onFullScreenListener: any;
   constructor() { }
   responsiveOptions: any[];
-  public images: any[];
+  public images: Image[];
 
   public static getTile(title: string): string{
     let tl: string;
@@ -37,6 +42,7 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.bindDocumentListeners();
     this.responsiveOptions = [
       {
         breakpoint: '1024px',
@@ -76,13 +82,80 @@ export class GalleryComponent implements OnInit {
         thumbnailImageSrc: '../assets/img-gallery/IMG_1807.jpg',
         alt: GalleryComponent.getTile('../assets/img-gallery/IMG_1807.jpg'),
         title: GalleryComponent.getTile('../assets/img-gallery/IMG_1807.jpg')
-      },
-      {
-        galleryImages: '../assets/img-gallery/5-small.jpeg',
-        thumbnailImageSrc: '../assets/img-gallery/5-medium.jpeg',
-        alt: GalleryComponent.getTile('../assets/img-gallery/5-big.jpeg'),
-        title: GalleryComponent.getTile('../assets/img-gallery/5-big.jpeg')
       }
     ];
+  }
+
+  private onFullScreenChange() {
+    this.fullscreen = !this.fullscreen;
+  }
+  private bindDocumentListeners() {
+    this.onFullScreenListener = this.onFullScreenChange.bind(this);
+    document.addEventListener("fullscreenchange", this.onFullScreenListener);
+    document.addEventListener("mozfullscreenchange", this.onFullScreenListener);
+    document.addEventListener("webkitfullscreenchange", this.onFullScreenListener);
+    document.addEventListener("msfullscreenchange", this.onFullScreenListener);
+  }
+
+  public closePreviewFullScreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+    else if (document['mozCancelFullScreen']) {
+      document['mozCancelFullScreen']();
+    }
+    else if (document['webkitExitFullscreen']) {
+      document['webkitExitFullscreen']();
+    }
+    else if (document['msExitFullscreen']) {
+      document['msExitFullscreen']();
+    }
+  }
+  unbindDocumentListeners() {
+    document.removeEventListener("fullscreenchange", this.onFullScreenListener);
+    document.removeEventListener("mozfullscreenchange", this.onFullScreenListener);
+    document.removeEventListener("webkitfullscreenchange", this.onFullScreenListener);
+    document.removeEventListener("msfullscreenchange", this.onFullScreenListener);
+    this.onFullScreenListener = null;
+  }
+
+  ngOnDestroy() {
+    this.unbindDocumentListeners();
+  }
+
+  public galleriaClass() {
+    return `custom-galleria ${this.fullscreen ? 'fullscreen' : ''}`;
+  }
+
+  public fullScreenIcon() {
+    console.log('fullscreen');
+    return `pi ${this.fullscreen ? 'pi-window-minimize' : 'pi-window-maximize'}`;
+  }
+  onThumbnailButtonClick() {
+    this.showThumbnails = !this.showThumbnails;
+  }
+
+  toggleFullScreen() {
+    if (this.fullscreen) {
+      this.closePreviewFullScreen();
+    }
+    else {
+      this.openPreviewFullScreen();
+    }
+  }
+  openPreviewFullScreen() {
+    let elem = this.galleria.element.nativeElement.querySelector(".p-galleria");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    }
+    else if (elem['mozRequestFullScreen']) { /* Firefox */
+      elem['mozRequestFullScreen']();
+    }
+    else if (elem['webkitRequestFullscreen']) { /* Chrome, Safari & Opera */
+      elem['webkitRequestFullscreen']();
+    }
+    else if (elem['msRequestFullscreen']) { /* IE/Edge */
+      elem['msRequestFullscreen']();
+    }
   }
 }

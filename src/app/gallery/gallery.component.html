@@ -1,12 +1,25 @@
-<p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '800px'}" [numVisible]="7">
-  <ng-template pTemplate="item" let-item>
-    <img [src]="item.previewImageSrc" style="width: 100%; display: block;"/>
-  </ng-template>
-  <ng-template pTemplate="thumbnail" let-item>
-    <div class="p-grid p-nogutter p-justify-center">
-      <img [src]="item.thumbnailImageSrc" style="display: block;"/>
-    </div>
-  </ng-template>
-</p-galleria>
-
-
+<div id="galleria">
+  <p-galleria
+    #galleria
+    [value]="images"
+    [(activeIndex)]="activeIndex" [numVisible]="5" [containerStyle]="{'max-width':'1100px', 'margin': 'auto'}" [containerClass]="galleriaClass()" [showThumbnails]="showThumbnails"
+    [showItemNavigators]="true" [showIndicators]="true" [showItemNavigatorsOnHover]="true" [circular]="true" [autoPlay]="true" [transitionInterval]="5000">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.galleryImages" [ngStyle]="{'width': !fullscreen ? '100%' : '', 'display': !fullscreen ? 'block' : '', 'max-height' : fullscreen ? '' : '35rem'}"/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="p-grid p-nogutter p-justify-center">
+        <img [src]="item.galleryImages" style="display: block;"/>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="footer" let-item>
+      <div class="custom-galleria-footer">
+        <!--      <i class="fas fa-list" style="margin: .7rem; cursor: pointer" (click)="onThumbnailButtonClick()"></i>-->
+        <span *ngIf="images"  class="title-container">
+            <span class="title">{{images[activeIndex].title}}</span>
+        </span>
+        <button class="fas fa-expand fullscreen-button" style="cursor: pointer" (click)=toggleFullScreen()></button>
+      </div>
+    </ng-template>
+  </p-galleria>
+</div>

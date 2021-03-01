@@ -1,4 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md/lib/free/modals';
 export enum TariffsType {
   'summer'= 'summer',
   'winter' = 'winter'
@@ -13,6 +14,7 @@ export class TariffsComponent implements OnInit {
   summerPdf = '/assets/tariffs/Tarifblatt_BFMatrei.pdf';
   winterPdf = '/assets/tariffs/Tarifblatt_BFMatrei-Winter.pdf';
   tariffsType = TariffsType;
+  @ViewChild('basicModal') public loadedId: ModalDirective;
 
   constructor() { }
 
