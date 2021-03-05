@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "galleryImages": "assets/img/gallery-img/Abfahrt am Gletscher.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Abfahrt am Gletscher.jpg",
+      "alt": "Abfahrt am Gletscher",
+      "title": "Abfahrt am Gletscher"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Abfahrt in den Hohen Tauern.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Abfahrt in den Hohen Tauern.jpg",
+      "alt": "Abfahrt in den Hohen Tauern",
+      "title": "Abfahrt in den Hohen Tauern"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Aufstieg zum Großvenediger.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Aufstieg zum Großvenediger.jpg",
+      "alt": "Aufstieg zum Großvenediger",
+      "title": "Aufstieg zum Großvenediger"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Blick aus den Gletschertor.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Blick aus den Gletschertor.jpg",
+      "alt": "Blick aus den Gletschertor",
+      "title": "Blick aus den Gletschertor"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Blick zum Großvenediger.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Blick zum Großvenediger.jpg",
+      "alt": "Blick zum Großvenediger",
+      "title": "Blick zum Großvenediger"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Das Defreggerhaus.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Das Defreggerhaus.jpg",
+      "alt": "Das Defreggerhaus",
+      "title": "Das Defreggerhaus"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Das Schlatenkess.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Das Schlatenkess.jpg",
+      "alt": "Das Schlatenkess",
+      "title": "Das Schlatenkess"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Dreiherrenspitze.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Dreiherrenspitze.jpg",
+      "alt": "Dreiherrenspitze",
+      "title": "Dreiherrenspitze"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Einsame Bergwelt.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Einsame Bergwelt.jpg",
+      "alt": "Einsame Bergwelt",
+      "title": "Einsame Bergwelt"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Falkenstein klettern.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Falkenstein klettern.jpg",
+      "alt": "Falkenstein klettern",
+      "title": "Falkenstein klettern"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Gebirgsee.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Gebirgsee.jpg",
+      "alt": "Gebirgsee",
+      "title": "Gebirgsee"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Großglockner Umrundung.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Großglockner Umrundung.jpg",
+      "alt": "Großglockner Umrundung",
+      "title": "Großglockner Umrundung"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Großvenediger im Winter.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Großvenediger im Winter.jpg",
+      "alt": "Großvenediger im Winter",
+      "title": "Großvenediger im Winter"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Großvenediger von der Prager Hütte.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Großvenediger von der Prager Hütte.jpg",
+      "alt": "Großvenediger von der Prager Hütte",
+      "title": "Großvenediger von der Prager Hütte"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Großvenedigerkrone.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Großvenedigerkrone.jpg",
+      "alt": "Großvenedigerkrone",
+      "title": "Großvenedigerkrone"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Rötspitze.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Rötspitze.jpg",
+      "alt": "Rötspitze",
+      "title": "Rötspitze"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Skitour in Osttirol.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Skitour in Osttirol.jpg",
+      "alt": "Skitour in Osttirol",
+      "title": "Skitour in Osttirol"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Skitouren in den Hohen Tauern.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Skitouren in den Hohen Tauern.jpg",
+      "alt": "Skitouren in den Hohen Tauern",
+      "title": "Skitouren in den Hohen Tauern"
+    },
+    {
+      "galleryImages": "assets/img/gallery-img/Sonnenaufgang am Großvenediger.jpg",
+      "thumbnailImageSrc": "assets/img/gallery-img/Sonnenaufgang am Großvenediger.jpg",
+      "alt": "Sonnenaufgang am Großvenediger",
+      "title": "Sonnenaufgang am Großvenediger"
+    }
+  ],
+  "imageTitles" : [
+    "AbfahrtamGletscher",
+    "Abfahrt in den Hohen Tauern",
+    "Aufstieg zum Großvenediger",
+    "Blick aus den Gletschertor",
+    "Blick zum Großvenediger",
+    "Das Defreggerhaus",
+    "Das Schlatenkess",
+    "Dreiherrenspitze",
+    "Einsame Bergwelt",
+    "Falkenstein klettern",
+    "Gebirgsee",
+    "Großglockner Umrundung",
+    "Großvenediger im Winter",
+    "Großvenediger von der Prager Hütte",
+    "Großvenedigerkrone",
+    "Rötspitze",
+    "Skitour in Osttirol",
+    "Skitouren in den Hohen Tauern",
+    "Sonnenaufgang am Großvenediger"
+  ]
+}

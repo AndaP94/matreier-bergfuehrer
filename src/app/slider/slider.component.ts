@@ -17,7 +17,7 @@ export class SliderComponent implements OnInit {
 
   private loadSlider(){
     for (let i = 1; i < 4; i++){
-      const dir = 'assets/img/img-edit/Bergführer-MatreiSlider-' + i + '.jpg';
+      const dir = 'assets/img/slider/Slider' + i + '.jpg';
       this.sliderImgsSrc.push(dir);
     }
     const header1 = 'Bergführerverein Matrei in Osttirol';

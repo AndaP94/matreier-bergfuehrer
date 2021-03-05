@@ -2,7 +2,7 @@
   <p-galleria
     #galleria
     [value]="images"
-    [(activeIndex)]="activeIndex" [numVisible]="5" [containerStyle]="{'max-width':'1100px', 'margin': 'auto'}" [containerClass]="galleriaClass()" [showThumbnails]="showThumbnails"
+    [(activeIndex)]="activeIndex" [numVisible]="5" [containerStyle]="{'max-width':'1100px', 'margin': 'auto', 'height': '500px'}" [containerClass]="galleriaClass()" [showThumbnails]="showThumbnails"
     [showItemNavigators]="true" [showIndicators]="true" [showItemNavigatorsOnHover]="true" [circular]="true" [autoPlay]="true" [transitionInterval]="5000">
     <ng-template pTemplate="item" let-item>
       <img [src]="item.galleryImages" [ngStyle]="{'width': !fullscreen ? '100%' : '', 'display': !fullscreen ? 'block' : '', 'max-height' : fullscreen ? '' : '35rem'}"/>
