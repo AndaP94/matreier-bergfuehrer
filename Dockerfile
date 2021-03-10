@@ -3,7 +3,7 @@
 # 2) nginx stage to serve frontend assets
 
 # Name the node stage "builder"
-FROM node:10.1.3 AS builder
+FROM node:alpine AS builder
 # Set working directory
 WORKDIR /app
 # Copy all files from current directory to working dir in image
